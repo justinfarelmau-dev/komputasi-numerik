@@ -1,0 +1,95 @@
+1.Tujuan
+
+1. Menyelesaikan cara menyelesaikan SPL tiga variabel menggunakan metode Eliminasi gauss.
+2. Menentukan nilai variabel x,y, dan z yang memenuhi seluruh persamaan.
+3. Memahami pengugunaan matriks augmented dan oprasi baris elementer.
+4. Menyusun langkah pEnyelesai SPL secarah runtut dan sistematis.
+5. Menerapkan konsep komputasi numerik sebagai dasar implementasi penyelesaian SPL menggunakan Python.
+
+2. Contoh Permasalahan
+Diketehahuhi sistem persaman linear berikut;
+x + 2y + z = 9
+2x -y + 3z = 13
+3x +y - 2z =4
+Tentukan nilai x,y dan z menggunakan metode Eliminasi Gauss.
+
+3. Lagkah-Lagkah Peyelesaian 
+
+Lagkah 1. Membentuk matriks augmented
+Koefisien dan konstanta dari ketiga persaman disusun menjadi matriks augmented:
+
+[ 1  2  1 |  9 ]
+[ 2 -1  3 | 13 ]
+[ 3  1 -2 |  4 ]
+
+Lagkah 2. Eliminasi kolom pertama
+Gunakan oprasi baris baris R₂ ← R₂ − 2R₁ dan R₃ ← R₃ − 3R₁. Hasilnya:
+[ 1  2  1 |  9 ]
+[ 0 -5  1 |  9 ]
+[ 0 -5 -5 | -23]
+
+Lagkah 3. Eliminasi kolom kedua
+ Gunakan oprasi baris R₃ ← R₃ − R₂. Hasilnya menjadi matriks segitiga atas:
+[ 1  2  1 |  9 ]
+[ 0 -5  1 | -5 ]
+[ 0  0 -6 | -18]
+
+Langkah 4. Subsitusi mundur
+6. Dari baris ketiga: −6z = −18, sehingga z = 3.
+7. Dari baris kedua: : −5y + z = −5. Substitusi z = 3 menghasilkan −5y + 3 = −5, sehingga y = 1,6.
+8. Dari baris Pertama: x + 2y + z = 9. Substitusi y = 1,6 dan z = 3 menghasilkan x + 3,2 + 3 = 9, sehingga x = 2,8.
+
+4. Algoritma dalam Bentuk Pseudocode
+ALGORITMA SPL 3 VARIABEL 
+METODE ELIMINASI GAUSS
+
+Deklarasi :
+A[3][4] : matriks augmented
+    x, y, z : bilangan real
+    i, j, k : bilangan bulat
+    faktor  : bilangan real
+
+Deskripsi :
+MULAI
+1. Masukan kofisien dan konstanta dari tiga persamaan linear.
+2. Susun kofisien dan kostanta ke dalam matriks augmented berukuran 3 x 4.
+3. Untuk K = 0 sampai 1:
+   a. Periksa elemen pivot A[k][k].
+   b. Jika pivot = 0, tukar baris dengan baris di bawahnya
+      yang memiliki elemen tidak nol pada kolom tersebut.
+   c. Untuk i = k+1 sampai 2:
+      - faktor = A[i][k] / A[k][k]
+      - Untuk j = k sampai 3:
+        A[i][j] = A[i][j] - faktor * A[k][j]
+4. Periksa apakah matriks menghasilkan solusi tunggal.
+Jika Terdapat baris [0, 0, 0 | nilai bukan nol], sistem tidak memiliki solusi.
+Jika terdapat pivot yang tidak cuckup untuk menentukan semuah Variabel,
+Sistem tidak memiliki solusi tungal.
+5. Lakukan substitusi mundur:
+   z = A[2][3] / A[2][2]
+   y = (A[1][3] - A[1][2] * z) / A[1][1]
+   x = (A[0][3] - A[0][1] * y - A[0][2] * z) / A[0][0]
+6. Tampilkan nilai x, y, dan z.
+7. Verivikasi hasil dengan memasukan nilai ke persaman awal.
+SELESAI
+5. Alur Peyelesaian 
+9. Mulai
+10. Masukan tiga persamaan linear
+11. Bentuk matriks augmented berukuran 3 x 4.
+12. Lakukan eliminasi kolom pertama dan kolom kedua.
+13. Periksa kondisi pivot dan kemungkinan solusi.
+14. Lakukan subsitusi mundur untuk memperoleh z,y dan x.
+15. Tampilkan serta verivikasi hasil
+16. selesai
+
+6. Hasil Akhir dan Verivikasi
+Hasil perhitungan adalah:
+x = 2,8        y = 1,6        z = 3
+
+
+
+
+
+
+
+
