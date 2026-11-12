@@ -1,0 +1,4 @@
+data akun mahasiswa
+link githup https://github.com/justinfarelmau-dev
+link googel colab https://colab.research.google.com/notebooks/intro.ipynb
+ link linkedin https://www.linkedin.com/in/justin-farel-mau-undefined-433054442/
