@@ -72,7 +72,7 @@ Sistem tidak memiliki solusi tungal.
 6. Tampilkan nilai x, y, dan z.
 7. Verivikasi hasil dengan memasukan nilai ke persaman awal.
 SELESAI
-5. Alur Peyelesaian 
+8. Alur Peyelesaian 
 9. Mulai
 10. Masukan tiga persamaan linear
 11. Bentuk matriks augmented berukuran 3 x 4.
